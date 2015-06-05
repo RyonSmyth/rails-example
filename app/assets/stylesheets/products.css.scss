@@ -1,3 +1,22 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  margin-bottom: 30px;
+}
+h1, h2, .new-product {
+	text-align: center;
+}
+td {
+  padding-right: 25px;
+}
+#product-content {
+  border: solid 1px
+}
+table {
+  margin: 0 auto;
+}
+#product-color:nth-child(odd) {
+    background: gray;
+}
+#product-features {
+  background: white;
+}

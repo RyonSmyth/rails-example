@@ -1,4 +1,4 @@
-<h1>Listing products</h1>
+<h1 class="header">Listing products</h1>
 
 <table>
   <thead>
@@ -12,13 +12,13 @@
 
   <tbody>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr id="product-color">
+        <td id="product-content"><%= product.name %></td>
+        <td id="product-content"><%= product.description %></td>
+        <td id="product-content"><%= product.image_url %></td>
+        <td id="product-features"><%= link_to 'Show', product %></td>
+        <td id="product-features"><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td id="product-features"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<p class="new-product"><%= link_to 'New Product', new_product_path %></p>

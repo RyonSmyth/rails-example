@@ -10,6 +10,7 @@ td {
 }
 #product-content {
   border: solid 1px;
+  padding-left:10px;
 }
 table {
   margin: 0 auto;
@@ -19,4 +20,7 @@ table {
 }
 #product-features {
   background: white;
+}
+th {
+	text-align: center;
 }

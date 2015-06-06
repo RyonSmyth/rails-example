@@ -6,7 +6,6 @@
       <th>Name</th>
       <th>Description</th>
       <th>Image url</th>
-      <th>Color</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +16,6 @@
         <td id="product-content"><%= product.name %></td>
         <td id="product-content"><%= product.description %></td>
         <td id="product-content"><%= product.image_url %></td>
-        <td id="product-content"><%= product.color %></td>
         <td id="product-features"><%= link_to 'Show', product %></td>
         <td id="product-features"><%= link_to 'Edit', edit_product_path(product) %></td>
         <td id="product-features"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

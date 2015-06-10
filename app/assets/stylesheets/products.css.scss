@@ -5,17 +5,14 @@
 h1, h2, .new-product {
 	text-align: center;
 }
-td {
-  padding-right: 25px;
-}
+
 #product-content {
   border: solid 1px;
-  padding-left:13px;
 }
 table {
   margin: 0 auto;
 }
-#product-color:nth-child(odd) {
+#product-design:nth-child(odd) {
     background: gray;
 }
 #product-features {
@@ -28,9 +25,21 @@ th {
 	background-color: #231f20;
 }
 .content {
-	background-color: #ffffff;
-	padding-bottom: 100%;
+  background-color: #ffffff;
+  height: 110%;
 }
 header {
   margin-top: 1em;
+}
+#product-content{
+  width: 12em;
+  height: 12em;
+  text-align: center;
+}
+.product-spacing {
+  padding: 1em;
+}
+#product-image {
+  height: 100%;
+  width: 100%;
 }

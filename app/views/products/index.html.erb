@@ -14,15 +14,15 @@
 
   <tbody>
     <% @products.each do |product| %>
-      <tr id="product-color">
-        <td id="product-content"><%= product.name %></td>
-        <td id="product-content"><%= product.description %></td>
-        <td id="product-content"><%= product.image_url %></td>
-        <td id="product-content"><%= product.color %></td>
-        <td id="product-content"><%= product.price %></td>
-        <td id="product-features"><%= link_to 'Show', product %></td>
-        <td id="product-features"><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td id="product-features"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr id="product-design">
+        <td class="product-spacing" id="product-content"><%= product.name %></td>
+        <td class="product-spacing" id="product-content"><%= product.description %></td>
+        <td id="product-content"><img src="<%= product.image_url %>" id="product-image"></td>
+        <td class="product-spacing" id="product-content"><%= product.color %></td>
+        <td class="product-spacing" id="product-content"><%= product.price %></td>
+        <td class="product-spacing" id="product-features"><%= link_to 'Show', product %></td>
+        <td class="product-spacing" id="product-features"><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class="product-spacing" id="product-features"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

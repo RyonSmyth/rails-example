@@ -8,6 +8,11 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    li form {
+    padding-top: 1em;
+    }
+  </style>
 </head>
 <body class ="container" data-target=".navbar">
 
@@ -25,10 +30,16 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Home", root_path %></a>
-            <li><%= link_to "Featured", static_pages_landing_page_path %></a>
-            <li><%= link_to "Products", products_path %></a>
-            <li><%= link_to "About", static_pages_about_path %></a>
-            <li><%= link_to "Contact", static_pages_contact_path %></a>  
+            <li><%= link_to "Featured", static_pages_landing_page_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q) %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+            </li>
           </ul>
         </div>
       </div>

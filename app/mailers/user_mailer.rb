@@ -6,5 +6,5 @@ class UserMailer < ActionMailer::Base
   mail(:from => email,
   	:to => 'ryans970@hotmail.com',
   	:subject => "A new contact form message from #{name}")
-  end
+ end
 end

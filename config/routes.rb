@@ -5,9 +5,10 @@ Rails.application.routes.draw do
     post 'signin' => 'devise/sessions#create', :as => :user_session
     get '/users/sign_out' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+  resources :products do
+    resources :comments
+  end
   resources :users 
-
-  resources :products
   resources :orders, only: [:index, :show, :new, :create]
   
   get 'static_pages/about'

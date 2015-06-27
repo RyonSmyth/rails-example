@@ -50,3 +50,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'coffee-script-source', '~> 1.9.1.1'
+
+gem 'will_paginate', '~> 3.0.6'

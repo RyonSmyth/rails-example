@@ -38,6 +38,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do

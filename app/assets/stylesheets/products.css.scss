@@ -5,17 +5,14 @@
 h1, h2, .new-product {
 	text-align: center;
 }
-td {
-  padding-right: 25px;
-}
+
 #product-content {
   border: solid 1px;
-  padding-left:13px;
 }
 table {
   margin: 0 auto;
 }
-#product-color:nth-child(odd) {
+#product-design:nth-child(odd) {
     background: gray;
 }
 #product-features {
@@ -23,4 +20,73 @@ table {
 }
 th {
 	text-align: center;
+}
+.container {
+	background-color: #231f20;
+}
+header {
+  margin-top: 1em;
+}
+#product-content{
+  width: 12em;
+  height: 12em;
+  text-align: center;
+}
+.product-spacing {
+  padding: 1em;
+}
+#product-image {
+  height: 100%;
+  width: 100%;
+}
+
+#show-image {
+  display: inline-block;
+  float: left;
+  padding-top: 3em;
+  padding-left: 3em;
+}
+#show-name {
+  display: inline-block;
+  font-size: 4em;
+  padding-left: 3em;
+  padding-top: 1em;
+
+}
+#show-description {
+  display: inline-block;
+  font-size: 1.3em;
+  padding-left: 5.2em;
+  padding-top: 1em;
+}
+#show-info {
+  display: inline-block;
+  font-size: 1.3em;
+  padding-left: 10.5em;
+  padding-top: 1em;
+}
+#show-comment {
+  clear: left;
+}
+#comment-header {
+  margin-left: 2.3em;
+  padding-top: 1em;
+}
+.new_comment {
+  margin-left: 3em;
+}
+#comment_body{
+  width: 30em;
+  height: 8em;
+}
+#comment_rating {
+  width: 30em;
+}
+.product-reviews {
+  margin-left: 5em;
+  border: black;
+}
+#show-rating {
+  display: inline-block;
+  margin-left: 17em;
 }

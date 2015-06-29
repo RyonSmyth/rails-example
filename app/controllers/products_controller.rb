@@ -1,15 +1,21 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name ILIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /products/new
@@ -28,7 +34,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to products_path, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

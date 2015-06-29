@@ -38,9 +38,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+gem 'devise'
+
+gem 'cancancan'
+
+gem 'coffee-script-source', '~> 1.9.1.1'
+
+gem 'will_paginate', '~> 3.0.6'

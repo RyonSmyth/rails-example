@@ -25,4 +25,5 @@ FactoryGirl.define do
   factory :comment do 
   	body "Test"
   	rating 5
+  end
 end

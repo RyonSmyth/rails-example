@@ -4,7 +4,7 @@ describe UsersController, :type => :controller do
   describe "GET #index" do
     context "user is logged on" do
       before do
-        @user = User.new
+        @user = FactoryGirl.build(:user)
         sign_in @user
       end
 

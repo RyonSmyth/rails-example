@@ -13,4 +13,16 @@ FactoryGirl.define do
   	last_name "User"
   	admin true
   end
+
+  factory :product do 
+  	name "Bike"
+  	description "Mountain Bike"
+  	image_url "/images/bike.jpg"
+  	color "Black"
+  	price "150"
+  end
+
+  factory :comment do 
+  	body "Test"
+  	rating 5
 end

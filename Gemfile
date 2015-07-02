@@ -39,6 +39,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-spork'
 end
 
 group :production do
@@ -57,3 +60,5 @@ gem 'will_paginate', '~> 3.0.6'
 gem "factory_girl_rails", "~> 4.0"
 
 gem 'simplecov', :require => false, :group => :test
+
+gem "spork-rails"

@@ -7,11 +7,11 @@
 <p id="show-name">
   <!-- Product Name -->
   <%= @product.name %>
-</p>
+</p><br>
 
 <p id="show-description">
   <%= @product.description %>
-</p>
+</p><br>
 
 <p id="show-info">
   <strong>Color:</strong>
@@ -24,7 +24,9 @@
 	Average Rating:
 </p> <br>
 <div class="rated" id="show-rating" data-score="<%= @product.average_rating %>"></div>
-
+<%= form_tag "/payments/create" do %>
+	<%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
 <p id="show-comment">
 <%= render 'new_comment' %>
 </p>

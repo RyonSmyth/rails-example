@@ -62,3 +62,5 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'simplecov', :require => false, :group => :test
 
 gem "spork-rails"
+
+gem 'stripe'

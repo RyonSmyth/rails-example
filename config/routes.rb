@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+  resources :payments, only: [:create]
   resources :users 
   resources :orders, only: [:index, :show, :new, :create]
   
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   get 'static_pages/landing_page'
 
   post 'static_pages/thank_you'
+
+  post '/payments/create' => 'payments#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -8,3 +8,4 @@ class Product < ActiveRecord::Base
   	comments.average(:rating).to_f
   end
 end
+

@@ -64,3 +64,5 @@ gem 'simplecov', :require => false, :group => :test
 gem "spork-rails"
 
 gem 'stripe'
+
+gem 'byebug'

@@ -30,6 +30,8 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.10-x86-mingw32)
     builder (3.2.2)
+    byebug (5.0.0)
+      columnize (= 0.9.0)
     cancancan (1.11.0)
     childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
@@ -41,6 +43,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    columnize (0.9.0)
     devise (3.5.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -59,7 +62,6 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    ffi (1.9.10)
     ffi (1.9.10-x86-mingw32)
     formatador (0.2.5)
     guard (2.12.7)
@@ -231,6 +233,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  byebug
   cancancan
   coffee-rails (~> 4.0.0)
   coffee-script-source (~> 1.9.1.1)

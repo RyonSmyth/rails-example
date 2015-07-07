@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations'}
   resources :products do
     resources :comments
+    resources :payments, only: [:create]
   end
-  resources :payments, only: [:create]
+  
   resources :users 
   resources :orders, only: [:index, :show, :new, :create]
   

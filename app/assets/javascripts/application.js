@@ -14,3 +14,10 @@
 // = require jquery_ujs
 // = require turbolinks
 // = require_tree .
+
+$.ajax({
+  success: function(e,data, status, xhr){ alert('Success!')
+   },
+  error: function(e, xhr, status, error){ alert('Error!')
+   }
+}); 

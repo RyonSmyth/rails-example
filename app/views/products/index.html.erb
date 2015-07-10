@@ -13,17 +13,21 @@
   </thead>
 
   <tbody>
+    <% cache(cache_key_for_products) do %>
     <% @products.each do |product| %>
       <tr id="product-design">
+        <% cache(product) do %>
         <td class="product-spacing" id="product-content"><%= product.name %></td>
         <td class="product-spacing" id="product-content"><%= product.description %></td>
         <td id="product-content"><img src="<%= product.image_url %>" id="product-image"></td>
         <td class="product-spacing" id="product-content"><%= product.color %></td>
         <td class="product-spacing" id="product-content"><%= product.price %></td>
+        <% end %>
         <td class="product-spacing" id="product-features"><%= link_to 'Show', product %></td>
         <td class="product-spacing" id="product-features"><%= link_to 'Edit', edit_product_path(product) %></td>
         <td class="product-spacing" id="product-features"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

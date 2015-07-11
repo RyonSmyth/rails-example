@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.6"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use SCSS for stylesheets
@@ -68,4 +68,7 @@ gem 'stripe'
 gem 'byebug'
 
 gem 'brakeman', :require => false
+
 gem "dalli"
+
+gem 'redis-rails'

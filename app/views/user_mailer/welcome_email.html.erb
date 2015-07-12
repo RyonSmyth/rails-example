@@ -1,12 +1,12 @@
-<table>
-  <tbody>
-    <tr>
-      <td><p>Welcome to Berlin Bikes!!</p></td>
-    </tr>
-    <tr>
-      <td><p>First Name: <%= @first_name %></p></td>
-      <td><p>Last Name: <%= @last_name %></p></td>
-      <td><p>Account Email: <%= @email %></p></td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.name %></h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>

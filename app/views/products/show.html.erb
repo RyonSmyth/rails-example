@@ -3,7 +3,7 @@
 <p id="show-image">
 <img src="<%= @product.image_url %>" height="300" width="400">
 </p>
-
+<div id="show-format">
 <p id="show-name">
   <!-- Product Name -->
   <%= @product.name %>
@@ -28,6 +28,7 @@
 	<%= render partial: "shared/stripe_checkout_button" %>
 	<%= hidden_field_tag(:product_id, @product.id) %>
 <% end %>
+</div>
 <p id="show-comment">
 <%= render 'new_comment' %>
 </p>

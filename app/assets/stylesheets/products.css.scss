@@ -49,20 +49,17 @@ header {
 #show-name {
   display: inline-block;
   font-size: 4em;
-  padding-left: 3em;
   padding-top: 1em;
 
 }
 #show-description {
   display: inline-block;
   font-size: 1.3em;
-  padding-left: 5.2em;
   padding-top: 1em;
 }
 #show-info {
   display: inline-block;
   font-size: 1.3em;
-  padding-left: 10.5em;
   padding-top: 1em;
 }
 #show-comment {
@@ -88,10 +85,14 @@ header {
 }
 #show-rating {
   display: inline-block;
-  margin-left: 17em;
 }
 #show-payment {
   display: inline-block;
-  padding-top: 2em;
-  margin-left: 16.5em;
+  padding-top: 3em;
+}
+
+#show-format {
+  display: inline-block;
+  margin-left: 7em;
+  text-align: center;
 }

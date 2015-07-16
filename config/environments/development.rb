@@ -37,15 +37,15 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "smtp.hotmail.com",
-    port: 587,
-    domain: "hotmail.com",
-    user_name: "ryans970",
-    password: "password",
-    authentication: "plain",
-    enable_starttls_auto: true  }
+  config.action_mailer.delivery_method = :test
+  #config.action_mailer.smtp_settings = {
+   # address: "test.hotmail.com",
+  #  port: 587,
+  #  domain: "hotmail.com",
+  #  user_name: "ryans970",
+  #  password: "password",
+  #  authentication: "plain",
+  #  enable_starttls_auto: true  }
 
     config.action_mailer.perform_deliveries = true
   

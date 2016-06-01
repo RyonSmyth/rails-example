@@ -1,0 +1,10 @@
+
+<%= form_tag "/payments/create" do %>
+
+	<% @products.each do |product| %>
+  		<%= f.collection_select(:tickets, product.name) %>
+  	<% end %>
+
+
+	<%= render partial: "shared/stripe_checkout_button" %>
+<% end %>

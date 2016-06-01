@@ -5,12 +5,19 @@ class PaymentsController < ApplicationController
     token = params[:stripeToken]
     product = Product.find(params[:product_id])
     begin
+
+      customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],
+
+      )
+
       charge = Stripe::Charge.create(
       	:amount => product.price_in_cents,
       	:currency => "usd",
       	:source => token,
-      	:description => params[:stripeEmail]
+      	:description => params[:stripeEmail],
       )
+      UserMailer.payments_email(customer).deliver
 
     rescue Stripe::CardError => e
       body = e.json_body

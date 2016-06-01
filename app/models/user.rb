@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable, :timeout_in =>20.minutes
 	has_many :orders
+	has_many :payments
 
  after_create :send_welcome_email
  def send_welcome_email

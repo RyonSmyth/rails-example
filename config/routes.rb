@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
     resources :payments, only: [:create]
+    resources :orders, only: [:index, :show, :create]
   end
   
   resources :users 
-  resources :orders, only: [:index, :show, :new, :create]
+  resources :orders, only: [:index, :show, :create]
   
   get 'static_pages/about'
 
@@ -15,6 +16,10 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   get 'static_pages/landing_page'
+
+  get 'products/tickets' => 'products#tickets'
+
+  match 'tickets' => 'products#tickets', :via => [:get], :as => 'tickets'
 
   post 'static_pages/thank_you'
 

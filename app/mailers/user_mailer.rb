@@ -1,6 +1,11 @@
 class UserMailer < ActionMailer::Base
   default from: "from@example.com"
 
+ def payments_email(customer)
+   @customer = customer
+   mail(:to => @customer.email, :subject => "Payment Confirmation")
+ end
+
  def welcome_email(user)
    @user = user
    mail(:to => @user.email, :subject => "Welcome to Berlin Bikes")
@@ -12,6 +17,7 @@ class UserMailer < ActionMailer::Base
   	:to => 'ryans970@hotmail.com',
   	:subject => "A new contact form message from #{name}")
  end
+
  def thank_you
    @name = params[:name]
    @email = params[:email]
